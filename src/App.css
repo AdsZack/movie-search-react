@@ -1,0 +1,144 @@
+:root {
+  --primary-color: #0d253f;
+  --secondary-color: #01b4e4;
+  --tertiary-color: #90cea1;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--primary-color);
+  color: white;
+  margin: 0;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+
+form input {
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 20px;
+  background-color: #0d253f;
+  color: white;
+}
+
+form input:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background-color: #091c2f;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+
+.movie-card .movie-info {
+  padding: 10px;
+}
+
+.movie-card h3 {
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+}
+
+.movie-detail {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.movie-detail-poster {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.movie-detail-info h1 {
+  font-size: 3rem;
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+.movie-detail-info .tagline {
+  font-style: italic;
+  color: #ccc;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.genres {
+  margin: 20px 0;
+}
+
+.genre-tag {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .movie-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+}
